@@ -45,7 +45,7 @@ For security reasons **Sanchezium** is installed under **sanchezium** user, henc
 ```
 SNCZ_USER=sanchezium #replace sanchezium with the MN username you want to check
 
-su - $SNCS_USER
+su - $SNCZ_USER
 Sancheziumd masternode status
 Sancheziumd getinfo
 ```  
