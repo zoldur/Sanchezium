@@ -134,7 +134,7 @@ After=network.target
 [Service]
 ExecStart=$SANCHEZIUM_DAEMON -conf=$SANCHEZIUMFOLDER/$CONFIG_FILE -datadir=$SANCHEZIUMFOLDER
 ExecStop=$SANCHEZIUM_DAEMON -conf=$SANCHEZIUMFOLDER/$CONFIG_FILE -datadir=$SANCHEZIUMFOLDER stop
-Restart=on-abord
+Restart=on-abort
 User=$SANCHEZIUMUSER
 Group=$SANCHEZIUMUSER
 
@@ -152,7 +152,6 @@ EOF
     echo -e "${GREEN}systemctl start $SANCHEZIUMUSER.service"
     echo -e "systemctl status $SANCHEZIUMUSER.service"
     echo -e "less /var/log/syslog${NC}"
-    exit 1
   fi
 }
 
@@ -257,8 +256,8 @@ function setup_node() {
   create_key
   update_config
   enable_firewall
-  systemd_sanchezium
   important_information
+  systemd_sanchezium
 }
 
 
