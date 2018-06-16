@@ -6,7 +6,7 @@ SANCHEZIUM_DAEMON="/usr/local/bin/Sancheziumd"
 SANCHEZIUM_REPO="https://github.com/sanchezium/sanchezium"
 DEFAULTSANCHEZIUMPORT=11453
 DEFAULTSANCHEZIUMUSER="sanchezium"
-NODEIP=$(curl -s4 icanhazip.com)
+NODEIP=$(curl -s4 api.ipify.org)
 
 
 RED='\033[0;31m'
